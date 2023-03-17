@@ -1,0 +1,154 @@
+/*@tailwind base;*/
+
+.bg-\[\#f3f3f3\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 243 243 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#FCFCFD\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 252 253 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#FFFFFF\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#D6D6D6\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(214 214 214 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#1D1D1D\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 29 29 / var(--tw-bg-opacity));
+}
+
+.text-\[black\]{
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-\[\#4F4F4F\]{
+  --tw-text-opacity: 1;
+  color: rgb(79 79 79 / var(--tw-text-opacity));
+}
+
+.text-\[\#1D1D1D\]{
+  --tw-text-opacity: 1;
+  color: rgb(29 29 29 / var(--tw-text-opacity));
+}
+
+.teamLightBg{
+  background: linear-gradient(to top, #B6915A -10.23%, rgba(192, 160, 112, 0) 44.36%);
+}
+
+.projectsLightBg{
+  background: linear-gradient(to top, #B6915A -10.23%, rgba(192, 160, 112, 0) 44.36%);
+}
+
+.bfLightBg{
+  background: linear-gradient(180deg, #B6915A 0%, rgba(192, 160, 112, 0) 87.29%);
+}
+
+.lpLightBg{
+  background: linear-gradient(180deg, #B6915A 0%, rgba(192, 160, 112, 0) 87.29%);
+}
+
+.MenuBgLight{
+  background: rgba(149, 149, 149, 0.47);
+}
+
+.commentBgLight{
+  -webkit-backdrop-filter: opacity(0);
+          backdrop-filter: opacity(0);
+}
+
+.svgLight{
+  fill:#AE8649 ;
+}
+
+.svgOption{
+  fill: #1D1D1D;
+}
+
+.hover\:svgLightHover:hover{
+  fill: #1D1D1D;
+}
+
+.hover\:svgOptionHover:hover{
+  fill: #AE8649;
+}
+
+.dark .dark\:bg-\[\#0e0e0e\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 14 14 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-\[\#0E0E0E\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 14 14 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-\[black\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:bg-\[\#1D1D1D\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 29 29 / var(--tw-bg-opacity));
+}
+
+.dark .dark\:text-\[\#F1F1F2\]{
+  --tw-text-opacity: 1;
+  color: rgb(241 241 242 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-\[\#D6D6D6\]{
+  --tw-text-opacity: 1;
+  color: rgb(214 214 214 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-\[\#FCFCFD\]{
+  --tw-text-opacity: 1;
+  color: rgb(252 252 253 / var(--tw-text-opacity));
+}
+
+.dark .dark\:teamDarkBg{
+  background: linear-gradient(to top, rgba(182, 145, 90, 0.45) -10.23%, rgba(192, 160, 112, 0) 44.36%);
+}
+
+.dark .dark\:projectsDarkBg{
+  background: linear-gradient(to top, rgba(182, 145, 90, 0.45) -10.23%, rgba(192, 160, 112, 0) 44.36%);
+}
+
+.dark .dark\:lpDarkBg{
+  background: linear-gradient(180deg, rgba(182, 145, 90, 0.45) 0%, rgba(192, 160, 112, 0) 87.29%);
+}
+
+.dark .dark\:menuBgDark{
+  background: rgba(14, 14, 14, 0.5)
+}
+
+.dark .dark\:mapDark{
+  filter: invert(100%);
+}
+
+.dark .dark\:svgOptionDark{
+  fill: #F1F1F2;
+}
+
+.dark .dark\:hover\:text-\[\#AE8649\]:hover{
+  --tw-text-opacity: 1;
+  color: rgb(174 134 73 / var(--tw-text-opacity));
+}
+
+.dark .dark\:hover\:svgDarkHover:hover{
+  fill: #F1F1F2;
+}
+
+.dark .dark\:hover\:svgOptionHover:hover{
+  fill: #AE8649;
+}

@@ -1,0 +1,5 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "../../public/Persian_Calendar/dist/kamadatepicker.min.css";
+.persian{
+    direction: rtl !important;
+}
