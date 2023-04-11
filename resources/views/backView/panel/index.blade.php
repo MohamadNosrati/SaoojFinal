@@ -67,6 +67,10 @@
             <img src="{{asset("images/logo/logoUsual.jpg")}}">
             <a class="btn text-white my-3 text-capitalize" href="{{route("seoEn.index")}}">English Seo</a>
         </div>
+        <div class="text-center bg-dark">
+            <img src="{{asset("images/logo/logoUsual.jpg")}}">
+            <a class="btn text-white my-3 text-capitalize" href="{{route("visitors.index")}}">Visitors</a>
+        </div>
     </div>
 @endsection
 

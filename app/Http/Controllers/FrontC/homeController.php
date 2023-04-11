@@ -15,11 +15,30 @@ use App\Models\Seo;
 use App\Models\Service;
 use App\Models\Slider;
 use App\Models\Team;
+use App\Models\Visitor;
 use Illuminate\Http\Request;
 use Morilog\Jalali\Jalalian;
-
 class homeController extends Controller
 {
+    public function PersianVisitorIp(){
+        if (!empty($_SERVER["HTTP_CLIENT_IP"])){
+            $ip=$_SERVER["HTTP_CLIENT_IP"];
+        }elseif (!empty($_SERVER["HTTP_X_FORWARDED_For"])){
+            $ip=$_SERVER["HTTP_X_FORWARDED_For"];
+        }else{
+            $ip=$_SERVER["REMOTE_ADDR"];
+        }
+        $check=Visitor::all()->where("Ip","=",$ip)->count();
+        if ($check===0){
+            $country=geoip()->getLocation($ip)->country;
+            $city=geoip()->getLocation($ip)->city;
+            Visitor::create([
+                "Ip"=>$ip,
+                "country"=>$country,
+                "city"=>$city
+            ]);
+        }
+    }
     public function index()
     {
         $slider=Slider::all();
@@ -30,6 +49,7 @@ class homeController extends Controller
         $sarooj=Sarooj::first();
         $general=General::first();
         $seo=Seo::all()->where("page","=","Home Persian")->first();
+        $this->PersianVisitorIp();
         return view("FrontView.Fa.index",compact("slider","category","service","faq","team","sarooj","general","seo"));
     }
     public function projects(){
@@ -38,6 +58,7 @@ class homeController extends Controller
         $sarooj=Sarooj::first();
         $project=Project::paginate(6);
         $general=General::first();
+        $this->PersianVisitorIp();
         return view("FrontView.Fa.projectsFa",compact("sarooj",'project',"category","general","seo"));
     }
     public function about(){
@@ -46,6 +67,7 @@ class homeController extends Controller
         $category=Category::all();
         $sarooj=Sarooj::first();
         $blog=Blog::all();
+        $this->PersianVisitorIp();
         return view("FrontView.Fa.aboutFa",compact("sarooj","blog","category","seo","comment"));
     }
     public function info($projectName){
@@ -57,6 +79,7 @@ class homeController extends Controller
         $bfs=Project::with("bfs")->find($projectId);
         $sarooj=Sarooj::first();
         $lp=Project::orderBy("id","desc")->take(3)->where("publish","=","1")->get();
+        $this->PersianVisitorIp();
         return view("FrontView.Fa.detailsFa",compact("sarooj","lp","project","bfs","seo","category","projectCat"));
     }
     public function categoryProjects($categoryName){
@@ -66,6 +89,7 @@ class homeController extends Controller
         $categoryId=Category::pluck("id","nameFa")[$categoryName];
         $project=Project::where("category_id","=",$categoryId)->paginate(6);
         $sarooj=Sarooj::first();
+        $this->PersianVisitorIp();
         return view("FrontView.Fa.projectsFa",compact("sarooj","project","category","general","seo"));
     }
 }

@@ -123,10 +123,10 @@
 <!-- *************** start footer ************************** -->
     <footer>
         <!-- *************** start topFooter ************************** -->
-        @include("FrontView.partials.fa.footer")
+        @include("FrontView.partials.Fa.footer")
         <!-- *************** end Top footer ************************** -->
         <!-- *************** start designer ************************** -->
-        @include("FrontView.partials.fa.designer")
+        @include("FrontView.partials.Fa.designer")
         <!-- *************** start designer ************************** -->
     </footer>
 <!-- *************** end footer ************************** -->

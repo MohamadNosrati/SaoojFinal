@@ -37,8 +37,7 @@ Route::middleware("auth")->prefix("dashboard/admin")->group(function (){
     Route::resource("/seoEn",\App\Http\Controllers\BackC\seoEnController::class)->parameters(["seoEn"=>"id"])->name("","seoEn");
     Route::resource("/blog",\App\Http\Controllers\BackC\blogController::class)->parameters(["blog"=>"id"])->name("","blog");
     Route::resource("/general",\App\Http\Controllers\BackC\generalController::class)->parameters(["general"=>"id"])->name("","general");
-
-
     Route::resource("/comment",\App\Http\Controllers\BackC\commentController::class)->parameters(["comment"=>"id"])->name("","comment");
     Route::resource("/commentEn",\App\Http\Controllers\BackC\commentEnController::class)->parameters(["commentEn"=>"id"])->name("","commentEn");
+    Route::resource("/visitors",\App\Http\Controllers\BackC\visitorController::class)->parameters(["visitors"=>"id"])->name("","visitor");
 });
